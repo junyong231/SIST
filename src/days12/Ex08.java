@@ -11,11 +11,11 @@ public class Ex08 {
 
 	public static void main(String[] args) {
 			     //*배열명 (객체명 아님)
-		Point point = new Point(); //객체화
+		//Point point = new Point(); //객체화
 		Point [] points =  new Point[500]; //배열 선언 (객체 아님.) 타입이 Point(클래스)일 뿐
 		
 		for (int i = 0; i < points.length; i++) {
-			points[i] = point;
+			points[i] = new Point();
 		}
 		
 		

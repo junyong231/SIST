@@ -14,6 +14,7 @@ public class Ex03 {
 	public static void main(String[] args) {
 		
 		//public int age = 10;  지역변수에는 접근지정자 쓰지 않음 (public없어야됨)
+		
 		//클래스: 객체의 설계도 , 객체: 클래스를 자료형으로 하는 '참조변수'★
 		Tv t1;//t1은 객체(참조변수. 주소값 받는 역할)
 		
