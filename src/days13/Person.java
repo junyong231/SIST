@@ -3,10 +3,25 @@ package days13;
 public class Person {
 
 	//field
-	private String name;
-	private int age;
-	private boolean gender;
+	private String name="익명";
+	private int age =20;
+	private boolean gender = false;
 
+	//consturtor
+	
+	public Person() {} //디폴트 생성자도 직접 만들어 줌
+	public Person(String n,int a,boolean g) {
+		name = n;
+		age = a;
+		gender =g;
+	}
+	public Person(String n) {
+		name=n;
+	}
+	public Person(String n , int a) {
+		name = n;
+		age = a;
+	}
 
 	//method
 	public void dispPerson() {

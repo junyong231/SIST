@@ -20,18 +20,33 @@ package days13;
  *
  */
 public class Ex05 {
-	
+
 	public Ex05() {
-		
+
 	}//
-	
+
 	public Ex05(String msg) {
-		
+
 	}// 생성자도 오버로딩 가능하다.
-	
+
 	public static void main(String[] args) {
+
+		Point p1 = new Point();
+		p1.x = 10;
+		p1.y = 20;
+		p1.dispPoint();
 		
-	
+		
+		Point p2 = new Point();
+		p2.x = 1;
+		p2.y = 2;
+
+		p1.plusPoint(p1, p2).dispPoint();
+		p2.plusPoint(p1, p2).dispPoint();
+
+
+
+
 
 	}//main
 
