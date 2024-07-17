@@ -45,7 +45,7 @@ public class Ex01 {
 
 			//그 반의 학생 정보 입력
 			System.out.printf("> %d반의 [%d]번 학생의 이름 국어 영어 수학 점수 입력 ? ",ban,counts[ban-1]+1); //+1 해야 '1번'부터 입력임
-			//counts[ban-1]은 인덱스 값 때문에 한 것 맞음 : ban은 배열이기 때문에 해당 반 맞추려고 ㅇㅇ 그다음 그 반 카운트에 +1 해주는거지
+			//counts[ban-1]은 인덱스 값 때문에 한 것 맞음 : ban은 배열이기 때문에 해당 반 맞추려고 ㅇㅇ 그다음 그 반에 학생수 카운트 +1 해주는거지
 			name =getName(); //scanner.next();
 			kor =getScore(); //scanner.nextInt();
 			eng =getScore(); //scanner.nextInt();

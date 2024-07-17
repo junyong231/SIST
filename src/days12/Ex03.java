@@ -25,7 +25,7 @@ public class Ex03 {
 		t1 = new Tv(); //객체 생성 또는 인스턴스화 라고 칭함 		new Tv()는 인스턴스화 시키는 코드		t1은 참조변수(객체)  new Tv()로 인스턴스됨
 		System.out.println(t1);
 		t1 = new Tv(); //이 둘은 같지 않다?! (참조하는 주소가 다름)
-		System.out.println(t1);
+		System.out.println(t1); //위에 주소는 쓰레기값 됨
 
 		//멤버에 접근하는법 : 객체명.필드명	객체명.메서드명
 		// Tv. :안됨 클래스명. 한거라서
