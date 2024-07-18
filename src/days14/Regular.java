@@ -4,7 +4,7 @@ public class Regular extends Employee {
 	//Object 상속
 	//Employee 상속 ( name, addr, tel, hiredate, ,,method..)
 
-	private int basePay; //기본급
+	private int basePay = 100; //기본급
 
 	public Regular() {
 		super();

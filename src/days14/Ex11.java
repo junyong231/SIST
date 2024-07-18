@@ -39,15 +39,15 @@ public class Ex11 {
 //		emp1.dispEmpInfo();
 		
 		//2. 레귤러 객체 만들어서 사원정보 출력 _ 기본급 출력 안되는 문제 O
-//		Regular emp2 = new Regular("정규진", "서울시 강북구",
-//				"010-5656-4545","2023.1.10",200);
-//		emp2.dispEmpInfo(); // 기본급이 출력이 안댐..
-//		System.out.println( emp2.getPay()); //기본급 출력O
+		Regular emp2 = new Regular("정규진", "서울시 강북구",
+				"010-5656-4545","2023.1.10",200);
+		emp2.dispEmpInfo(); // 기본급이 출력이 안댐..
+		System.out.println( emp2.getPay()); //기본급 출력O
 		
 		//2-2. 다형성 이해하면 알게 된다..?
 		// 		정규진은(R) 사원(E)이다 (O)
 		//부모타입					 자식객체
-		Employee emp2 = new Regular("정규진", "서울시 강북구",
+		Employee emp3 = new Regular("정규진", "서울시 강북구",
 				"010-5656-4545","2023.1.10",200);
 		emp2.dispEmpInfo();
 		//System.out.println( emp2.getPay());//빨간줄 : Employee는 겟페이 없지
@@ -57,7 +57,7 @@ public class Ex11 {
 		// Point p = new Regular(); 상속관계 없어서 형변환X 
 		
 		//부모객체를 자식객체로 변환 : [ 다운캐스팅 ] = 자동아니고 cast연산자 써야됨(강제형변환)
-		Regular emp3 =(Regular) emp2;
+		Regular emp4 =(Regular) emp3;
 		//emp2는 시작부터 업캐스팅된 부모객체고 11_02는 성골 부모객체라서 안됨
 		
 		// 

@@ -15,7 +15,8 @@ public class Ex03 {
 		
 		Point p2 = new Point(p1);
 		
-
+		
+		System.out.println(p2.getXY());
 	}//main
 
 }//class

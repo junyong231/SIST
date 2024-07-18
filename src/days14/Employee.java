@@ -1,6 +1,6 @@
 package days14;
 
-import lombok.Getter;
+//롬복 있었는데 걍 지워버림
 
 //사원클래스
 //모든 사원들이 공통적으로 가지고 있을 멤버들을 선언
@@ -15,6 +15,11 @@ public class Employee {
 	private String addr;
 	private String tel;
 	private String hiredate;
+
+
+	public void nado(String name, String addr, String tel, String hiredate) {//super가 왜 여긴 안오고 생성자로 가는거지 super는 생성자로 우선 가나
+		System.out.println("나도 슈퍼야");
+	}
 	
 	public Employee() {//디폴트 생성자
 		super();
@@ -30,7 +35,6 @@ public class Employee {
 		System.out.println("> Employee 4 생성자 호출됨");
 	}
 
-	
 	
 	//게터세터
 	public String getName() {

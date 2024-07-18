@@ -45,7 +45,7 @@ class Point3D {
 class Point3D extends Point2D { //상속...(확장된)
 	//	int x;
 	//	int y; 안써도 됨
-	// 생성자는 상속되지 않으므로 물려받은건 이게 다임..	
+	// 생성자는 상속되지 않으므로 물려받은건 이게 다임..	**
 	int z;
 
 

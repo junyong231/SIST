@@ -20,11 +20,11 @@ public class Ex08 {
 		//	p.  .찍으면 Point의 멤버 뿐만 아니라 Object의 멤버들도 나옴 => 자동 상속..
 		// 객체(클래스) 복사, 복제
 		// 생성자 복제
-//		Point p1 = new Point();
-//		p1.x  =1;
-//		p1.y = 5;
-//
-//		Point p2 = new Point(); 
+		Point p1 = new Point();
+		p1.x  =1;
+		p1.y = 5;
+
+		Point p2 = new Point(); 
 
 
 

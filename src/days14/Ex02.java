@@ -16,14 +16,14 @@ public class Ex02 {
 		Document doc3 = new Document();
 		Document doc4 = new Document();
 		
-
+		
 	}//main
 
 
 	
 	
 }//class
-
+//this를 잘 생각하고 한단계씩 추적해보면 결과가 왜 그렇게 나오는지 이해가능
 class Document {
 	String fileName = "Noname"; // 명시적 초기화
 	static int count = 1;
@@ -36,5 +36,6 @@ class Document {
 
 	public Document() {
 		this ("Noname\n" + count++);
+		System.out.println(count);
 	}
 }
