@@ -43,7 +43,7 @@ public class Ex08 {
 		// 클래스명.클래스변수	
 		//System.out.println(Save.rate);
 		//rate를 프라이빗에서 퍼블릭으로 바꾸지 않으면 접근할 수 없다.
-		Save.setRate(0.05); //게터 세터가  static 이 아니면 인스턴스 생성 전이라서 에러 (그것과 별개로 초기화 문단 이전에 있어서 해도 결과는 0.03나옴)
+		Save.setRate(0.05);
 		// static ==객체 생성 안해도 일단 메모리에 올림!!!!!!!!!!!!!!!!
 
 		//클래스배열 초기화
@@ -58,7 +58,7 @@ public class Ex08 {
 		//sArr[2].setRate(0.07); //객체로도 접근 가능함
 		// + 여기는 이미 인스턴스가 생성된 이후라서 게터 세터 가능
 		
-		
+		Save.setRate(0.05);
 		
 		for (int  i = 0; i < sArr.length; i++) {
 			sArr[i].dispSave();

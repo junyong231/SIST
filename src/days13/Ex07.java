@@ -52,7 +52,7 @@ class Member {
 	private String addr;
 	
 	//생성자
-		
+		//Member m2 = new Member();
 	public Member() { //디폴트 생성자
 		//super();
 		this("익명","미정"); //this의 두번째 용도
