@@ -1,4 +1,4 @@
-package days14;
+package days15;
 
 public class Car {
 
@@ -16,7 +16,7 @@ public class Car {
 	//constructor
 	
 	Car() { //결합력 높음
-		this.engine = new Engine();
+		//this.engine = new Engine();
 	}
 	
 	public Car(Engine engine) { // 의존성 주입(외부에서 엔진 받아옴)

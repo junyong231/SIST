@@ -55,7 +55,7 @@ class Point3D extends Point2D { //상속...(확장된)
 	Point3D(int x, int y, int z) {
 //		this.x =x;
 //		this.y =y;
-		super(x,y); //부모 것 호출
+		super(x,y); //부모 생성자 호출
 		this.z =z;	
 
 	}

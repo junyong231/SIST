@@ -47,18 +47,18 @@ public class Ex11 {
 		//2-2. 다형성 이해하면 알게 된다..?
 		// 		정규진은(R) 사원(E)이다 (O)
 		//부모타입					 자식객체
-		Employee emp3 = new Regular("정규진", "서울시 강북구",
-				"010-5656-4545","2023.1.10",200);
-		emp2.dispEmpInfo();
-		//System.out.println( emp2.getPay());//빨간줄 : Employee는 겟페이 없지
-		//ㄴ	'자동형변환'이 이루어짐 (자식-작음 => 부모-큼) 이라서 ㅇㅇ
+		Employee emp3 = new Regular("정규진", "서울시 강2북구",
+				"010-5656-4545","2023.1.10",200); //
+		emp3.dispEmpInfo();
+		//System.out.println( emp3.getPay());//빨간줄 : Employee는 겟페이 없지
+		//ㄴ	'자동형변환'이 이루어짐 (자식객체-작음 => 부모타입-큼) 이라서 ㅇㅇ(하위->상위)
 		//						이를 [ 업캐스팅 ] 이라고 한다..!
 		
 		// Point p = new Regular(); 상속관계 없어서 형변환X 
 		
 		//부모객체를 자식객체로 변환 : [ 다운캐스팅 ] = 자동아니고 cast연산자 써야됨(강제형변환)
-		Regular emp4 =(Regular) emp3;
-		//emp2는 시작부터 업캐스팅된 부모객체고 11_02는 성골 부모객체라서 안됨
+		Regular emp4 =(Regular) emp3; // 다운 캐스팅이 되는 모습
+		//emp3는 시작부터 업캐스팅된 부모객체고 11_02는 성골 부모객체라서 안됨
 		
 		// 
 		

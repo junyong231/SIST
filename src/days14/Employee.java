@@ -8,7 +8,7 @@ package days14;
 //@Getter
 //		ㄴ롬복으로 만든 어노테이션: 컴파일러가 나중에 알아서 게터로 바꿔줌
 
-public class Employee {
+public abstract class Employee {
 
 	//필드
 	private String name;
@@ -18,7 +18,8 @@ public class Employee {
 
 
 	public void nado(String name, String addr, String tel, String hiredate) {//super가 왜 여긴 안오고 생성자로 가는거지 super는 생성자로 우선 가나
-		System.out.println("나도 슈퍼야");
+		
+		System.out.println("나도 슈퍼야"); //아니었음 ..  super는 생성자만을 호출함
 	}
 	
 	public Employee() {//디폴트 생성자
@@ -74,6 +75,12 @@ public class Employee {
 	public void dispEmpInfo() {
 		System.out.printf("사원명: %s , 주소: %s , 연락처: %s , 입사일자: %s \n",this.name,this.addr,this.tel,this.hiredate);
 	}
+	
+	//겟페이 쓸 수 있게하자 - 자식 클래스들이 오버라이딩을 할 겟페이가 없어서 문제였는데 (각 사원의 겟페이 공식이 다 다르니까)
+	//오버라이딩 용으로 그냥 껍데기 만들어놓으면 되니 ㄱㄱ
+	public abstract int getPay();
+	//This method requires a body instead of a semicolon : 바디 대신 세미콜론 찍혔다
+	// 바디 return 0 같이 만들던지 abstract 붙여서 추상메서드 만들기 (위에 클래스(Employee)에도 붙여줘야함)
 	
 	
 }//class
