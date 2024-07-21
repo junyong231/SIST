@@ -25,11 +25,11 @@ public class Ex11 {
 }//class
 
 interface Parseable {
-	void parse(String fileName); //파싱(구문분석)하는 메서드
+	void parse(String fileName); //파싱(구문분석)하는 메서드		를 구현하기로 약속~
 	
 }
 
-class XMLParser implements Parseable{
+class XMLParser implements Parseable{ //이게 그걸 구현하는 클래스
 
 	@Override
 	public void parse(String fileName) {
@@ -42,7 +42,7 @@ class XMLParser implements Parseable{
 	}
 }
 
-class HTMLParser implements Parseable{
+class HTMLParser implements Parseable{//구현클래스2
 
 	@Override
 	public void parse(String fileName) {
@@ -53,7 +53,7 @@ class HTMLParser implements Parseable{
 }
 
 class ParseManager{
-	public static Parseable getParser(String docType) {
+	public static Parseable getParser(String docType) { //겟파서 메서드 정의 . 반환 타입은 인터페이스 파서블
 		if (docType.equals("xml")) {
 			return new XMLParser();
 		} else if (docType.equals("html")) {

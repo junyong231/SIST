@@ -57,7 +57,7 @@ public class Ex03 {
 	public static void printEmpPay (Employee emp) {
 		// Employee emp = R/S/T instanceof연산자 파악  ->  다운캐스팅 처리
 		String type = null;
-		if ( emp instanceof Temp) {//emp가 Temp 맞는지 물어봄
+		if ( emp instanceof Temp) {//emp가 Temp를 참조하고있냐 물어봄-> 불리언값 나옴
 			type = "임시직 사원";
 			Temp t = (Temp)emp;
 		}else if (emp instanceof SalesMan) {
