@@ -1,6 +1,6 @@
 package days16;
 
-import lombok.Getter;
+
 
 /**
  * @author JUNYONG

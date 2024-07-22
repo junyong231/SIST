@@ -34,7 +34,7 @@ public class Ex05 {
 		System.out.println("aBcD".toLowerCase());
 		char [] nameArr = name.toCharArray();
 		System.out.println(Arrays.toString(nameArr));
-		String msg = String.format("%s님 %d살","홍길동",20);
+		String msg = String.format("\n%s님 %d살",name,20);
 		System.out.println(msg);
 		
 		//두 문자열 비교
