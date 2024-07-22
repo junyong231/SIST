@@ -38,6 +38,12 @@ public class Point {
 	}
 	
 	
+	@Override
+	public String toString() {
+		return "Point [x=" + x + ", y=" + y + "]"; //위에 dsipPoint 쓸모없어짐 (days16 03에서 넘어옴)
+	}
+
+
 	//p1.plusPoint(p2);
 	public void plusPoint(Point p) { //p의 경우 식별자이므로 개발자 마음대로
 		x = x + p.x;

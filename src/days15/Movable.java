@@ -7,7 +7,7 @@ interface Movable {
 }
 
 
-//[모든 유닛 공통이라 abstract 씀]
+//[모든 유닛 공통이라 abstract 씀] 추상클래스
 //   ↓
 abstract class Unit{
 	int currentHP; // 현재 유닛의 체력
@@ -16,11 +16,11 @@ abstract class Unit{
 }
 
 interface Attackable{
-	void attack(Unit unit);
+	void attack(Unit unit);//추상메서드 .. 구현하기로 약속..
 }
 
 //인터페이스끼리 다중상속이 가능함. 
-interface Fightable extends Movable, Attackable{
+interface Fightable extends Movable, Attackable{ //파이터블은 움직일수도 공격도 할 수 있음
 
 }
 //공중유닛

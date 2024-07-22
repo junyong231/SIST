@@ -25,7 +25,7 @@ public class Ex11 {
 }//class
 
 interface Parseable {
-	void parse(String fileName); //파싱(구문분석)하는 메서드		를 구현하기로 약속~
+	void parse(String fileName); //파싱(구문분석)하는 메서드		를 구현하기로 약속~(인터페이스)
 	
 }
 

@@ -1,9 +1,10 @@
 package days11;
 
+
 /**
- * @author kenik
- * @date 2024. 7. 15. - 오후 4:14:24
- * @subject
+ * @author JUNYONG
+ * @Date 2024. 7. 22.=오후 3:15:53
+ * @subject 배열에서 해당값 찾아서 모든 index 출력
  * @content
  *
  */
