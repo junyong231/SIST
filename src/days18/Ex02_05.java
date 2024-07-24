@@ -1,0 +1,32 @@
+package days18;
+
+import java.text.MessageFormat;
+import java.text.ParseException;
+
+/**
+ * @author JUNYONG
+ * @Date 2024. 7. 24.=오전 11:40:37
+ * @subject
+ * @content
+ *
+ */
+public class Ex02_05 {
+
+	public static void main(String[] args) throws ParseException {
+
+		//String s = "[팀장]김준석(전), 최사랑(비), 박준용(전), 원충희(비), 이시훈(비)";
+		String output = "이름:권맑음, 나이:26살, 성별:남자, 키:178.67, 등급:A 입니다.";
+
+
+		String pattern = "이름:{0}, 나이:{1}살, 성별:{2}, 키:{3}입니다";
+		MessageFormat mf = new MessageFormat(pattern);
+		Object [] objs = mf.parse(output);
+		for (Object v : objs) { //for each
+			System.out.println(v);
+		}
+
+
+
+	}//main
+
+}//class
