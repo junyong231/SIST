@@ -56,13 +56,13 @@ class Person {
 	@Override
 	public int hashCode() {
 		
-		return this.id.hashCode(); //id로 해쉬코드 구분
+		return this.id.hashCode(); //id를 해쉬코드로 반환
 	}
 
 
 	@Override
 	public boolean equals(Object obj) {
-		if ( obj instanceof Person) {
+		if ( obj instanceof Person) { //obj가 Person을 참조한다면
 			Person p = (Person) obj;
 			return p.id.equals(this.id);
 		}

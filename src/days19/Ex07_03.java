@@ -29,7 +29,7 @@ public class Ex07_03 {
 		ArrayList lottos = new ArrayList(); // ArrayList의 요소만큼 게임 저장 가능
 		
 	      for (int i = 1; i <= gameNumber; i++) {
-	    	  lotto = new HashSet();
+	    	  lotto = new HashSet();//이거 안해주면 같은 번호로 게임횟수만큼 나옴
 	          fillLotto(lotto);
 	          lottos.add(lotto);
 	       }
