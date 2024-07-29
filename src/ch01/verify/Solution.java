@@ -1,31 +1,40 @@
 package ch01.verify;
 import java.util.Arrays;
-//"n is even"을, 홀수이면 "n is odd"
 import java.util.Scanner;
 
 public class Solution {
 	public static void main(String[] args) {
-		
-		int s =2 ;
-		String my_string="He11oWor1d";
-		String overwrite_string ="lloWorl";
-		System.out.println(solution(my_string,overwrite_string,s));
-	}
 
-	public static String solution(String my_string, String overwrite_string, int s) {
-		
-		char [] my = my_string.toCharArray();
-		char [] over = overwrite_string.toCharArray();
-		for (int i = s; i-s < overwrite_string.length(); i++) {
-			my[i] = over[i-s];
-	
+		String [] players = {"mumu", "soe", "poe", "kai", "mine"};
+		String[] callings = {"kai", "kai", "mine", "mine"};
+
+
+
+		System.out.println(Arrays.toString(solution(players, callings)));
+
+	}//main
+
+	public static String[] solution(String[] players, String[] callings) {
+		String[] answer = {};
+		String temp = "";
+		for (int i = 0; i < callings.length; i++) {
+
+			for (int j = 0; j < players.length; j++) {
+				if (callings[i].equals(players[j])) {
+					temp = players[j];
+					players[j] = players[j-1];
+					players[j-1] = temp;
+				}
+			}
+
 		}
-		
-		
-		String answer = new String(my);
-		
-		
-		return answer;
+		answer = players;
 
+
+		return answer;
 	}
-}
+
+
+
+}//class
+
