@@ -1,4 +1,4 @@
-package tennisProject;
+package tennisProjectReal.tennisProject;
 
 /**
  * @author wch
@@ -16,7 +16,7 @@ public class DataManager {
 	private int[] setScore = {0, 0};
 
 	private boolean isStop = false;
-	private boolean isTieBreak = true; //환경설정으로 타이브레이크 설정했는가
+	private boolean isTieBreak = false; //환경설정으로 타이브레이크 설정했는가
 	private boolean nowTieBreak = false;//지금 타이브레이크 중인가
 
 	private DataManager() { }
