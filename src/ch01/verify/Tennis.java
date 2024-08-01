@@ -18,14 +18,15 @@ public class Tennis {
 
 
 
-			while (t1.getScore()<40 && t2.getScore()<40 ) { //둘 다 40미만이면 계속 게임			
+			while (t1.getScore()<40 && t2.getScore()<40 ) { //둘 다 40미만이면 계속 게임		
+				gameplay();
 				if (gameplay()==1) {//t1이 포인트 땄을 때
 					t1.setScore(plusScore(t1.getScore()));
-					System.out.printf("%s이(가) 득점하였습니다\t현재점수\t%d   :   %d\n",t1.getName(),t1.getScore(),t2.getScore());
+					System.out.printf("%s이(가) 득점하였습니다\t\t현재점수\t%2d   :   %2d\n",t1.getName(),t1.getScore(),t2.getScore());
 
 				}else  {//t2가 포인트 땄을 때
 					t2.setScore(plusScore(t2.getScore()));
-					System.out.printf("%s이(가) 득점하였습니다\t현재점수\t%d   :   %d\n",t2.getName(),t1.getScore(),t2.getScore());
+					System.out.printf("%s이(가) 득점하였습니다\t현재점수\t%2d   :   %2d\n",t2.getName(),t1.getScore(),t2.getScore());
 
 				}
 
@@ -46,15 +47,30 @@ public class Tennis {
 			System.in.read(); 
 			System.in.skip( System.in.available() );
 			
+			
+
+			
+			
 			t1.setScore(0);
 			t2.setScore(0);
 			
-		}//큰while (세트 승패 가를때까지)
+			
+		}//큰while (게임수 듀스)
 
 
 
 
 	}//main
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -71,7 +87,7 @@ public class Tennis {
 		System.out.println("> 엔터치면 진행한다.");
 		System.in.read(); 
 		System.in.skip( System.in.available() );
-
+		gameplay();
 			if (gameplay()==1&& t1.getScore()==40) { //t1이 40점인데 또이김 => t1이 게임 획득
 				t1.setWinGameTime(t1.getWinGameTime()+1); //게임 승리 횟수 +1
 				System.out.printf("%s이(가) 이겼다\t이긴 게임 횟수:%d회\n",t1.getName(),t1.getWinGameTime());
@@ -92,17 +108,17 @@ public class Tennis {
 		
 		if (t1.getScore()==40) { //t1이 40이고 t2가 그 이하인데 이겨서 이 메서드로 온 상황
 			t2.setScore(plusScore(t2.getScore()));
-			System.out.printf("%s이(가) 득점하였습니다\t현재점수\t%d   :   %d\n",t2.getName(),t1.getScore(),t2.getScore());
+			System.out.printf("%s이(가) 득점하였습니다\t현재점수\t%2d   :   %2d\n",t2.getName(),t1.getScore(),t2.getScore());
 			
 		} else if (t2.getScore()==40) {//t2가 40이고 t1이 그 이하인데 이겨버려서 여기로 옴
 			t1.setScore(plusScore(t1.getScore()));
-			System.out.printf("%s이(가) 득점하였습니다\t현재점수\t%d   :   %d\n",t1.getName(),t1.getScore(),t2.getScore());
+			System.out.printf("%s이(가) 득점하였습니다\t\t현재점수\t%2d   :   %2d\n",t1.getName(),t1.getScore(),t2.getScore());
 		} 
 		
 		if (t1.getScore() ==t2.getScore()) {//득점해서 듀스됐니?
 			System.out.println("듀스..");
 			deuceGame(t1, t2);
-		}else tryWin(t1,t2); //득점해도 차이나면 보통 승패 가리기로 ㄱ
+		}else tryWin(t1,t2); //득점해도 차이나면 보통 승패 가리기로 ㄱ (40:15 같은 상황)
 		
 	}
 		
@@ -110,16 +126,16 @@ public class Tennis {
 		System.out.println("> 엔터치면 진행한다.");
 		System.in.read(); 
 		System.in.skip( System.in.available() );
-			
+		gameplay();
 			if (gameplay()==1) {
 				t1.setScore(plusScore(t1.getScore()));
 				t1.setAdvStatus('A');
-				System.out.printf("%s이(가) 득점하였습니다\t현재점수\t%C   :   %d\n",t1.getName(),t1.getAdvStatus(),t2.getScore());
+				System.out.printf("%s이(가) 득점하였습니다\t\t현재점수\t%C   :   %2d\n",t1.getName(),t1.getAdvStatus(),t2.getScore());
 				
 			}else  {
 				t2.setScore(plusScore(t2.getScore()));
 				t2.setAdvStatus('A');
-				System.out.printf("%s이(가) 득점하였습니다\t현재점수\t%d  :   %C\n",t2.getName(), t1.getScore(),t2.getAdvStatus());
+				System.out.printf("%s이(가) 득점하였습니다\t현재점수\t%2d  :   %C\n",t2.getName(), t1.getScore(),t2.getAdvStatus());
 
 			}
 			deuceTryWin(t1, t2);
@@ -131,22 +147,22 @@ public class Tennis {
 
 
 	private static void deuceTryWin(Team t1, Team t2) throws IOException { //둘 다 score 40인 상황..
-		System.out.println("게임 승리의 기회!"); 
+		System.out.println("듀스 게임 승리의 기회!"); 
 		System.out.println("> 엔터치면 진행한다.");
 		System.in.read(); 
 		System.in.skip( System.in.available() );
-
+		gameplay();
 			if (gameplay()==1&&t1.getAdvStatus()=='A') { //t1이 A상태에서 이김
 				t1.setWinGameTime(t1.getWinGameTime()+1); //게임 승리 횟수 +1
-				System.out.printf("%s이(가) 이겼다\t이긴 게임 횟수:%d회\n",t1.getName(),t1.getWinGameTime());
+				System.out.printf("%s이(가) 이겼다\t 이긴 게임 횟수:%d회\n",t1.getName(),t1.getWinGameTime());
 				
 			}else if(gameplay()==2&& t2.getAdvStatus()=='A') { //t2 게임 획득
 				t2.setWinGameTime(t2.getWinGameTime()+1);
-				System.out.printf("%s이(가) 이겼다\t이긴 게임 횟수:%d회\n",t2.getName(),t2.getWinGameTime());
+				System.out.printf("%s이(가) 이겼다\t 이긴 게임 횟수:%d회\n",t2.getName(),t2.getWinGameTime());
 				
 			}else { //A인 쪽의 반대 팀이 이김 
-				t1.setAdvStatus(' ');
-				t2.setAdvStatus(' ');// 다시 듀스니까 A상태 해제
+				t1.setAdvStatus('ㅁ');
+				t2.setAdvStatus('ㅁ');// 다시 듀스니까 A상태 해제
 				isDeuce(t1,t2); 
 			}
 		
