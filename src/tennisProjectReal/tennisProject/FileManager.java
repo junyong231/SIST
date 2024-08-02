@@ -1,4 +1,4 @@
-package tennisProjectReal.tennisProject;
+package tennisProject;
 
 import java.io.File;
 import java.io.FileWriter;

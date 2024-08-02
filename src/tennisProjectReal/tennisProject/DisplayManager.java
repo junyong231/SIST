@@ -1,4 +1,4 @@
-package tennisProjectReal.tennisProject;
+package tennisProject;
 
 public class DisplayManager {
 
@@ -12,13 +12,13 @@ public class DisplayManager {
 		int t2Point = dm.getPoint()[1];
 
 		if (dm.nowTieBreak()) {//타이브레이크 전용 전광판
-			String separator1 = " TIE┏─────────────────────────────┓TIE\n";
+			String separator1 = " TIE┏────────────────────────────────────────────────┓TIE\n";
 
-			String format =         " ┃ %-6s ┃     %-6s ┃     %-6s ┃   %-4s\t ┃ \n"; 
+			String format =         "    ┃   %-3s  ┃     %-6s ┃   %-6s ┃      %-4s  ┃ \n"; 
 
-			String header = String.format (" ┃%6s   ┃   %-4s ┃   %-4s ┃   %-4s  ┃  \n", "선수","게임","세트","TIE 포인트");
-			String separator2 = " ┠───────────────────────────────┨\n";
-			String separator3 = " TIE┗─────────────────────────────┛TIE\n";
+			String header = String.format ("    ┃%6s   ┃    %-4s  ┃    %-4s┃ %-4s ┃  \n", "선수","게임","세트","TIE 포인트");
+			String separator2 = "    ┠────────────────────────────────────────────────┨\n";
+			String separator3 = " TIE┗────────────────────────────────────────────────┛TIE\n";
 			String status1 = String.format
 					(format, dm.getPlayers()[0], dm.getGameScore()[0], dm.getSetScore()[0], t1Point);//포인트 날 것 그대로 출력
 			String status2 = String.format
@@ -29,13 +29,13 @@ public class DisplayManager {
 			fm.log(scoreboard);
 		}else {
 
-			String separator1 = " ┏───────────────────────────────┓\n";
+			String separator1 = "    ┏──────────────────────────────────────────────┓\n";
 
-			String format =         " ┃ %-6s ┃     %-6s ┃     %-6s ┃   %-4s\t ┃ \n"; 
+			String format =         "    ┃   %-3s  ┃     %-6s ┃     %-6s ┃   %-4s ┃ \n"; 
 
-			String header = String.format (" ┃%6s   ┃   %-4s ┃   %-4s ┃   %-4s  ┃  \n", "선수","게임","세트","포인트");
-			String separator2 = " ┠───────────────────────────────┨\n";
-			String separator3 = " ┗───────────────────────────────┛\n";
+			String header = String.format ("    ┃%6s   ┃    %-4s  ┃    %-4s  ┃ %-4s┃  \n", "선수","게임","세트","포인트");
+			String separator2 = "    ┠──────────────────────────────────────────────┨\n";
+			String separator3 = "    ┗──────────────────────────────────────────────┛\n";
 			String status1 = String.format
 					(format, dm.getPlayers()[0], dm.getGameScore()[0], dm.getSetScore()[0], strPoint[t1Point]);
 			String status2 = String.format

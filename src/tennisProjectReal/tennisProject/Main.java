@@ -1,4 +1,4 @@
-package tennisProjectReal.tennisProject;
+package tennisProject;
 
 import java.io.File;
 
@@ -18,7 +18,7 @@ public class Main {
 				System.out.println("> 다시 게임을 시작하려면 엔터");
 				System.in.read();
 				System.in.skip(System.in.available());
-
+				
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
